@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="5.0.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v5.0.0(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#FPArithmetic" name="4"/>
+  <lib desc="#Memory" name="5"/>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#TTL" name="7"/>
+  <lib desc="#TCL" name="8"/>
+  <lib desc="#Base" name="9"/>
+  <lib desc="#BFH-Praktika" name="10"/>
+  <lib desc="#Input/Output-Extra" name="11"/>
+  <lib desc="#Soc" name="12"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool map="Button2" name="Poke Tool"/>
+    <tool map="Button3" name="Menu Tool"/>
+    <tool map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool name="Poke Tool"/>
+    <tool name="Edit Tool"/>
+    <tool name="Wiring Tool"/>
+    <tool name="Text Tool"/>
+    <tool name="Image"/>
+    <sep/>
+    <tool name="Pin"/>
+    <tool name="Pin">
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+    </tool>
+    <sep/>
+    <tool name="NOT Gate"/>
+    <tool name="AND Gate"/>
+    <tool name="OR Gate"/>
+    <tool name="XOR Gate"/>
+    <tool name="NAND Gate"/>
+    <tool name="NOR Gate"/>
+    <sep/>
+    <tool name="D Flip-Flop"/>
+    <tool name="Register"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+  </circuit>
+  <circuit name="p1_rs_latch_gate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p1_rs_latch_gate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(130,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="R"/>
+    </comp>
+    <comp lib="0" loc="(130,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="S"/>
+    </comp>
+    <comp lib="0" loc="(530,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(530,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(330,240)" name="NOR Gate"/>
+    <comp lib="1" loc="(330,360)" name="NOR Gate"/>
+    <wire from="(130,220)" to="(270,220)"/>
+    <wire from="(130,380)" to="(270,380)"/>
+    <wire from="(210,260)" to="(210,280)"/>
+    <wire from="(210,260)" to="(270,260)"/>
+    <wire from="(210,280)" to="(390,280)"/>
+    <wire from="(230,300)" to="(230,340)"/>
+    <wire from="(230,300)" to="(360,300)"/>
+    <wire from="(230,340)" to="(270,340)"/>
+    <wire from="(330,240)" to="(360,240)"/>
+    <wire from="(330,360)" to="(390,360)"/>
+    <wire from="(360,240)" to="(360,300)"/>
+    <wire from="(360,240)" to="(530,240)"/>
+    <wire from="(390,280)" to="(390,360)"/>
+    <wire from="(390,360)" to="(530,360)"/>
+  </circuit>
+  <circuit name="p1_rs_latch_vhdl">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p1_rs_latch_vhdl"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(380,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(380,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="qn"/>
+      <a name="labelloc" val="east"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(60,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="s"/>
+    </comp>
+    <comp lib="0" loc="(60,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="r"/>
+    </comp>
+    <comp loc="(320,300)" name="rs_latch"/>
+    <wire from="(320,300)" to="(380,300)"/>
+    <wire from="(320,320)" to="(380,320)"/>
+    <wire from="(380,280)" to="(380,300)"/>
+    <wire from="(380,320)" to="(380,350)"/>
+    <wire from="(60,270)" to="(70,270)"/>
+    <wire from="(60,350)" to="(70,350)"/>
+    <wire from="(70,270)" to="(70,300)"/>
+    <wire from="(70,300)" to="(100,300)"/>
+    <wire from="(70,320)" to="(100,320)"/>
+    <wire from="(70,320)" to="(70,350)"/>
+  </circuit>
+  <circuit name="p2_d_latch_gate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p2_d_latch_gate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(60,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="0" loc="(60,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="en"/>
+    </comp>
+    <comp lib="0" loc="(620,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(620,430)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="1" loc="(230,260)" name="NAND Gate"/>
+    <comp lib="1" loc="(230,430)" name="NAND Gate"/>
+    <comp lib="1" loc="(490,260)" name="NAND Gate"/>
+    <comp lib="1" loc="(490,430)" name="NAND Gate"/>
+    <wire from="(110,280)" to="(110,450)"/>
+    <wire from="(110,280)" to="(170,280)"/>
+    <wire from="(110,450)" to="(170,450)"/>
+    <wire from="(140,350)" to="(140,410)"/>
+    <wire from="(140,350)" to="(280,350)"/>
+    <wire from="(140,410)" to="(170,410)"/>
+    <wire from="(230,260)" to="(280,260)"/>
+    <wire from="(230,430)" to="(350,430)"/>
+    <wire from="(280,240)" to="(280,260)"/>
+    <wire from="(280,240)" to="(430,240)"/>
+    <wire from="(280,260)" to="(280,350)"/>
+    <wire from="(350,430)" to="(350,450)"/>
+    <wire from="(350,450)" to="(430,450)"/>
+    <wire from="(390,370)" to="(390,410)"/>
+    <wire from="(390,370)" to="(530,370)"/>
+    <wire from="(390,410)" to="(430,410)"/>
+    <wire from="(410,280)" to="(410,310)"/>
+    <wire from="(410,280)" to="(430,280)"/>
+    <wire from="(410,310)" to="(550,310)"/>
+    <wire from="(490,260)" to="(530,260)"/>
+    <wire from="(490,430)" to="(550,430)"/>
+    <wire from="(530,260)" to="(530,370)"/>
+    <wire from="(530,260)" to="(620,260)"/>
+    <wire from="(550,310)" to="(550,430)"/>
+    <wire from="(550,430)" to="(620,430)"/>
+    <wire from="(60,240)" to="(170,240)"/>
+    <wire from="(60,450)" to="(110,450)"/>
+  </circuit>
+  <circuit name="p2_d_latch_vhdl">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p2_d_latch_vhdl"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(460,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(460,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(70,290)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="d"/>
+    </comp>
+    <comp lib="0" loc="(70,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="en"/>
+    </comp>
+    <comp loc="(380,330)" name="d_latch"/>
+    <wire from="(120,290)" to="(120,330)"/>
+    <wire from="(120,330)" to="(160,330)"/>
+    <wire from="(120,350)" to="(120,390)"/>
+    <wire from="(120,350)" to="(160,350)"/>
+    <wire from="(380,330)" to="(440,330)"/>
+    <wire from="(380,350)" to="(440,350)"/>
+    <wire from="(440,280)" to="(440,330)"/>
+    <wire from="(440,280)" to="(460,280)"/>
+    <wire from="(440,350)" to="(440,420)"/>
+    <wire from="(440,420)" to="(460,420)"/>
+    <wire from="(70,290)" to="(120,290)"/>
+    <wire from="(70,390)" to="(120,390)"/>
+  </circuit>
+  <circuit name="p3_d_ff_gate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p3_d_ff_gate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1680,560)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1680,730)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(500,850)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(530,550)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="1" loc="(1250,560)" name="NAND Gate">
+      <a name="label" val="G5"/>
+    </comp>
+    <comp lib="1" loc="(1250,730)" name="NAND Gate">
+      <a name="label" val="G6"/>
+    </comp>
+    <comp lib="1" loc="(1510,560)" name="NAND Gate">
+      <a name="label" val="G7"/>
+    </comp>
+    <comp lib="1" loc="(1510,730)" name="NAND Gate">
+      <a name="label" val="G8"/>
+    </comp>
+    <comp lib="1" loc="(600,800)" name="NOT Gate"/>
+    <comp lib="1" loc="(730,570)" name="NAND Gate">
+      <a name="label" val="G1"/>
+    </comp>
+    <comp lib="1" loc="(730,740)" name="NAND Gate">
+      <a name="label" val="G2"/>
+    </comp>
+    <comp lib="1" loc="(990,570)" name="NAND Gate">
+      <a name="label" val="G3"/>
+    </comp>
+    <comp lib="1" loc="(990,740)" name="NAND Gate">
+      <a name="label" val="G4"/>
+    </comp>
+    <wire from="(1030,570)" to="(1030,680)"/>
+    <wire from="(1030,570)" to="(1090,570)"/>
+    <wire from="(1050,620)" to="(1050,740)"/>
+    <wire from="(1090,540)" to="(1090,570)"/>
+    <wire from="(1090,540)" to="(1190,540)"/>
+    <wire from="(1130,580)" to="(1130,750)"/>
+    <wire from="(1130,580)" to="(1190,580)"/>
+    <wire from="(1130,750)" to="(1130,850)"/>
+    <wire from="(1130,750)" to="(1190,750)"/>
+    <wire from="(1160,650)" to="(1160,710)"/>
+    <wire from="(1160,650)" to="(1300,650)"/>
+    <wire from="(1160,710)" to="(1190,710)"/>
+    <wire from="(1250,560)" to="(1300,560)"/>
+    <wire from="(1250,730)" to="(1370,730)"/>
+    <wire from="(1300,540)" to="(1300,560)"/>
+    <wire from="(1300,540)" to="(1450,540)"/>
+    <wire from="(1300,560)" to="(1300,650)"/>
+    <wire from="(1370,730)" to="(1370,750)"/>
+    <wire from="(1370,750)" to="(1450,750)"/>
+    <wire from="(1410,670)" to="(1410,710)"/>
+    <wire from="(1410,670)" to="(1550,670)"/>
+    <wire from="(1410,710)" to="(1450,710)"/>
+    <wire from="(1430,580)" to="(1430,610)"/>
+    <wire from="(1430,580)" to="(1450,580)"/>
+    <wire from="(1430,610)" to="(1570,610)"/>
+    <wire from="(1510,560)" to="(1550,560)"/>
+    <wire from="(1510,730)" to="(1570,730)"/>
+    <wire from="(1550,560)" to="(1550,670)"/>
+    <wire from="(1550,560)" to="(1680,560)"/>
+    <wire from="(1570,610)" to="(1570,730)"/>
+    <wire from="(1570,730)" to="(1680,730)"/>
+    <wire from="(500,850)" to="(520,850)"/>
+    <wire from="(520,800)" to="(520,850)"/>
+    <wire from="(520,800)" to="(570,800)"/>
+    <wire from="(520,850)" to="(1130,850)"/>
+    <wire from="(530,550)" to="(670,550)"/>
+    <wire from="(600,800)" to="(610,800)"/>
+    <wire from="(610,590)" to="(610,760)"/>
+    <wire from="(610,590)" to="(670,590)"/>
+    <wire from="(610,760)" to="(610,800)"/>
+    <wire from="(610,760)" to="(670,760)"/>
+    <wire from="(640,660)" to="(640,720)"/>
+    <wire from="(640,660)" to="(780,660)"/>
+    <wire from="(640,720)" to="(670,720)"/>
+    <wire from="(730,570)" to="(780,570)"/>
+    <wire from="(730,740)" to="(850,740)"/>
+    <wire from="(780,550)" to="(780,570)"/>
+    <wire from="(780,550)" to="(930,550)"/>
+    <wire from="(780,570)" to="(780,660)"/>
+    <wire from="(850,740)" to="(850,760)"/>
+    <wire from="(850,760)" to="(930,760)"/>
+    <wire from="(890,680)" to="(1030,680)"/>
+    <wire from="(890,680)" to="(890,720)"/>
+    <wire from="(890,720)" to="(930,720)"/>
+    <wire from="(910,590)" to="(910,620)"/>
+    <wire from="(910,590)" to="(930,590)"/>
+    <wire from="(910,620)" to="(1050,620)"/>
+    <wire from="(990,570)" to="(1030,570)"/>
+    <wire from="(990,740)" to="(1050,740)"/>
+  </circuit>
+  <circuit name="p3_d_ff_vhdl">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p3_d_ff_vhdl"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(240,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(250,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="d"/>
+    </comp>
+    <comp lib="0" loc="(580,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(580,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(510,230)" name="d_ff"/>
+    <wire from="(240,270)" to="(290,270)"/>
+    <wire from="(250,180)" to="(290,180)"/>
+    <wire from="(290,180)" to="(290,230)"/>
+    <wire from="(290,250)" to="(290,270)"/>
+    <wire from="(510,230)" to="(560,230)"/>
+    <wire from="(510,250)" to="(560,250)"/>
+    <wire from="(560,180)" to="(560,230)"/>
+    <wire from="(560,180)" to="(580,180)"/>
+    <wire from="(560,250)" to="(560,310)"/>
+    <wire from="(560,310)" to="(580,310)"/>
+  </circuit>
+  <circuit name="p4_jk_ff_gate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p4_jk_ff_gate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1200,440)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1210,590)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(340,710)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(340,850)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rst"/>
+    </comp>
+    <comp lib="0" loc="(400,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="J"/>
+    </comp>
+    <comp lib="0" loc="(400,610)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="K"/>
+    </comp>
+    <comp lib="1" loc="(1050,440)" name="NAND Gate">
+      <a name="label" val="G7"/>
+    </comp>
+    <comp lib="1" loc="(1050,590)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G8"/>
+    </comp>
+    <comp lib="1" loc="(440,710)" name="NAND Gate">
+      <a name="label" val="N1"/>
+    </comp>
+    <comp lib="1" loc="(440,850)" name="NAND Gate">
+      <a name="label" val="N2"/>
+    </comp>
+    <comp lib="1" loc="(600,440)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G1"/>
+    </comp>
+    <comp lib="1" loc="(600,590)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G2"/>
+    </comp>
+    <comp lib="1" loc="(750,440)" name="NAND Gate">
+      <a name="label" val="G3"/>
+    </comp>
+    <comp lib="1" loc="(750,590)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G4"/>
+    </comp>
+    <comp lib="1" loc="(900,440)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G5"/>
+    </comp>
+    <comp lib="1" loc="(900,590)" name="NAND Gate">
+      <a name="label" val="G6"/>
+    </comp>
+    <wire from="(1050,440)" to="(1080,440)"/>
+    <wire from="(1050,590)" to="(1100,590)"/>
+    <wire from="(1080,440)" to="(1080,520)"/>
+    <wire from="(1080,440)" to="(1120,440)"/>
+    <wire from="(1100,500)" to="(1100,590)"/>
+    <wire from="(1100,590)" to="(1150,590)"/>
+    <wire from="(1120,440)" to="(1120,800)"/>
+    <wire from="(1120,440)" to="(1200,440)"/>
+    <wire from="(1150,350)" to="(1150,590)"/>
+    <wire from="(1150,590)" to="(1210,590)"/>
+    <wire from="(340,710)" to="(360,710)"/>
+    <wire from="(340,850)" to="(360,850)"/>
+    <wire from="(360,690)" to="(360,710)"/>
+    <wire from="(360,690)" to="(380,690)"/>
+    <wire from="(360,710)" to="(360,730)"/>
+    <wire from="(360,730)" to="(360,760)"/>
+    <wire from="(360,730)" to="(380,730)"/>
+    <wire from="(360,760)" to="(810,760)"/>
+    <wire from="(360,830)" to="(360,850)"/>
+    <wire from="(360,830)" to="(380,830)"/>
+    <wire from="(360,850)" to="(360,870)"/>
+    <wire from="(360,870)" to="(380,870)"/>
+    <wire from="(400,420)" to="(540,420)"/>
+    <wire from="(400,610)" to="(540,610)"/>
+    <wire from="(440,710)" to="(480,710)"/>
+    <wire from="(440,850)" to="(630,850)"/>
+    <wire from="(480,460)" to="(480,570)"/>
+    <wire from="(480,460)" to="(540,460)"/>
+    <wire from="(480,570)" to="(480,710)"/>
+    <wire from="(480,570)" to="(540,570)"/>
+    <wire from="(500,350)" to="(1150,350)"/>
+    <wire from="(500,350)" to="(500,440)"/>
+    <wire from="(500,440)" to="(540,440)"/>
+    <wire from="(510,590)" to="(510,800)"/>
+    <wire from="(510,590)" to="(540,590)"/>
+    <wire from="(510,800)" to="(1120,800)"/>
+    <wire from="(600,440)" to="(630,440)"/>
+    <wire from="(600,590)" to="(610,590)"/>
+    <wire from="(610,590)" to="(610,610)"/>
+    <wire from="(610,610)" to="(690,610)"/>
+    <wire from="(630,420)" to="(630,440)"/>
+    <wire from="(630,420)" to="(690,420)"/>
+    <wire from="(630,590)" to="(630,850)"/>
+    <wire from="(630,590)" to="(690,590)"/>
+    <wire from="(630,850)" to="(830,850)"/>
+    <wire from="(650,460)" to="(650,490)"/>
+    <wire from="(650,460)" to="(690,460)"/>
+    <wire from="(650,490)" to="(780,490)"/>
+    <wire from="(650,510)" to="(650,570)"/>
+    <wire from="(650,510)" to="(760,510)"/>
+    <wire from="(650,570)" to="(690,570)"/>
+    <wire from="(750,440)" to="(760,440)"/>
+    <wire from="(750,590)" to="(780,590)"/>
+    <wire from="(760,420)" to="(760,440)"/>
+    <wire from="(760,420)" to="(840,420)"/>
+    <wire from="(760,440)" to="(760,510)"/>
+    <wire from="(780,490)" to="(780,590)"/>
+    <wire from="(780,590)" to="(780,610)"/>
+    <wire from="(780,610)" to="(840,610)"/>
+    <wire from="(810,460)" to="(810,570)"/>
+    <wire from="(810,460)" to="(840,460)"/>
+    <wire from="(810,570)" to="(810,760)"/>
+    <wire from="(810,570)" to="(840,570)"/>
+    <wire from="(830,440)" to="(830,850)"/>
+    <wire from="(830,440)" to="(840,440)"/>
+    <wire from="(830,850)" to="(950,850)"/>
+    <wire from="(900,440)" to="(910,440)"/>
+    <wire from="(900,590)" to="(920,590)"/>
+    <wire from="(910,420)" to="(910,440)"/>
+    <wire from="(910,420)" to="(990,420)"/>
+    <wire from="(920,590)" to="(920,610)"/>
+    <wire from="(920,610)" to="(990,610)"/>
+    <wire from="(950,520)" to="(1080,520)"/>
+    <wire from="(950,520)" to="(950,570)"/>
+    <wire from="(950,570)" to="(990,570)"/>
+    <wire from="(950,590)" to="(950,850)"/>
+    <wire from="(950,590)" to="(990,590)"/>
+    <wire from="(970,460)" to="(970,500)"/>
+    <wire from="(970,460)" to="(990,460)"/>
+    <wire from="(970,500)" to="(1100,500)"/>
+  </circuit>
+  <circuit name="p4_jk_ff_vhdl">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p4_jk_ff_vhdl"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(110,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="k"/>
+    </comp>
+    <comp lib="0" loc="(180,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="j"/>
+    </comp>
+    <comp lib="0" loc="(180,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(610,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(610,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(500,290)" name="jk_ff"/>
+    <wire from="(110,310)" to="(280,310)"/>
+    <wire from="(180,240)" to="(230,240)"/>
+    <wire from="(180,360)" to="(240,360)"/>
+    <wire from="(230,240)" to="(230,290)"/>
+    <wire from="(230,290)" to="(280,290)"/>
+    <wire from="(240,330)" to="(240,360)"/>
+    <wire from="(240,330)" to="(280,330)"/>
+    <wire from="(500,290)" to="(610,290)"/>
+    <wire from="(500,310)" to="(610,310)"/>
+    <wire from="(610,240)" to="(610,290)"/>
+    <wire from="(610,310)" to="(610,360)"/>
+  </circuit>
+  <circuit name="p5_d_ff_sc_gate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p5_d_ff_sc_gate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1290,740)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1290,960)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(560,1030)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="D"/>
+    </comp>
+    <comp lib="0" loc="(560,1180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clr"/>
+    </comp>
+    <comp lib="0" loc="(560,600)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="set"/>
+    </comp>
+    <comp lib="0" loc="(560,900)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="1" loc="(1070,740)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G5"/>
+    </comp>
+    <comp lib="1" loc="(1070,960)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G6"/>
+    </comp>
+    <comp lib="1" loc="(650,1180)" name="NOT Gate"/>
+    <comp lib="1" loc="(710,620)" name="NAND Gate"/>
+    <comp lib="1" loc="(850,680)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G1"/>
+    </comp>
+    <comp lib="1" loc="(860,1010)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G4"/>
+    </comp>
+    <comp lib="1" loc="(860,790)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G2"/>
+    </comp>
+    <comp lib="1" loc="(860,900)" name="NAND Gate">
+      <a name="inputs" val="3"/>
+      <a name="label" val="G3"/>
+    </comp>
+    <wire from="(1070,740)" to="(1100,740)"/>
+    <wire from="(1070,960)" to="(1150,960)"/>
+    <wire from="(1100,740)" to="(1100,900)"/>
+    <wire from="(1100,740)" to="(1290,740)"/>
+    <wire from="(1150,860)" to="(1150,960)"/>
+    <wire from="(1150,960)" to="(1290,960)"/>
+    <wire from="(1290,960)" to="(1290,970)"/>
+    <wire from="(560,1030)" to="(800,1030)"/>
+    <wire from="(560,1180)" to="(620,1180)"/>
+    <wire from="(560,600)" to="(650,600)"/>
+    <wire from="(560,900)" to="(700,900)"/>
+    <wire from="(600,640)" to="(600,670)"/>
+    <wire from="(600,640)" to="(650,640)"/>
+    <wire from="(600,670)" to="(670,670)"/>
+    <wire from="(650,1180)" to="(670,1180)"/>
+    <wire from="(670,1180)" to="(720,1180)"/>
+    <wire from="(670,670)" to="(670,1180)"/>
+    <wire from="(700,810)" to="(700,900)"/>
+    <wire from="(700,810)" to="(800,810)"/>
+    <wire from="(700,900)" to="(800,900)"/>
+    <wire from="(710,620)" to="(750,620)"/>
+    <wire from="(720,1010)" to="(720,1120)"/>
+    <wire from="(720,1010)" to="(800,1010)"/>
+    <wire from="(720,1120)" to="(720,1180)"/>
+    <wire from="(720,1120)" to="(950,1120)"/>
+    <wire from="(720,790)" to="(720,1010)"/>
+    <wire from="(720,790)" to="(800,790)"/>
+    <wire from="(750,620)" to="(750,660)"/>
+    <wire from="(750,620)" to="(960,620)"/>
+    <wire from="(750,660)" to="(790,660)"/>
+    <wire from="(750,680)" to="(750,940)"/>
+    <wire from="(750,680)" to="(790,680)"/>
+    <wire from="(750,940)" to="(780,940)"/>
+    <wire from="(770,750)" to="(770,770)"/>
+    <wire from="(770,750)" to="(880,750)"/>
+    <wire from="(770,770)" to="(800,770)"/>
+    <wire from="(770,850)" to="(770,880)"/>
+    <wire from="(770,850)" to="(910,850)"/>
+    <wire from="(770,880)" to="(800,880)"/>
+    <wire from="(780,700)" to="(780,730)"/>
+    <wire from="(780,700)" to="(790,700)"/>
+    <wire from="(780,730)" to="(910,730)"/>
+    <wire from="(780,920)" to="(780,940)"/>
+    <wire from="(780,920)" to="(800,920)"/>
+    <wire from="(780,940)" to="(880,940)"/>
+    <wire from="(800,970)" to="(800,990)"/>
+    <wire from="(800,970)" to="(900,970)"/>
+    <wire from="(850,680)" to="(880,680)"/>
+    <wire from="(860,1010)" to="(880,1010)"/>
+    <wire from="(860,790)" to="(910,790)"/>
+    <wire from="(860,900)" to="(900,900)"/>
+    <wire from="(880,680)" to="(880,750)"/>
+    <wire from="(880,940)" to="(880,1010)"/>
+    <wire from="(900,900)" to="(900,970)"/>
+    <wire from="(900,900)" to="(930,900)"/>
+    <wire from="(910,730)" to="(910,790)"/>
+    <wire from="(910,790)" to="(910,850)"/>
+    <wire from="(910,790)" to="(960,790)"/>
+    <wire from="(930,900)" to="(930,960)"/>
+    <wire from="(930,960)" to="(1010,960)"/>
+    <wire from="(950,980)" to="(1010,980)"/>
+    <wire from="(950,980)" to="(950,1120)"/>
+    <wire from="(960,620)" to="(960,720)"/>
+    <wire from="(960,720)" to="(1010,720)"/>
+    <wire from="(960,740)" to="(1010,740)"/>
+    <wire from="(960,740)" to="(960,790)"/>
+    <wire from="(990,760)" to="(1010,760)"/>
+    <wire from="(990,760)" to="(990,860)"/>
+    <wire from="(990,860)" to="(1150,860)"/>
+    <wire from="(990,900)" to="(1100,900)"/>
+    <wire from="(990,900)" to="(990,940)"/>
+    <wire from="(990,940)" to="(1010,940)"/>
+  </circuit>
+  <circuit name="p5_d_ff_sc_vhdl">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="p5_d_ff_sc_vhdl"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(140,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(140,340)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(600,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="q"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(600,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="qn"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(500,220)" name="d_ff_sc"/>
+    <wire from="(140,160)" to="(210,160)"/>
+    <wire from="(140,220)" to="(190,220)"/>
+    <wire from="(140,280)" to="(170,280)"/>
+    <wire from="(140,340)" to="(190,340)"/>
+    <wire from="(170,260)" to="(170,280)"/>
+    <wire from="(170,260)" to="(280,260)"/>
+    <wire from="(190,220)" to="(190,240)"/>
+    <wire from="(190,240)" to="(280,240)"/>
+    <wire from="(190,280)" to="(190,340)"/>
+    <wire from="(190,280)" to="(280,280)"/>
+    <wire from="(210,160)" to="(210,220)"/>
+    <wire from="(210,220)" to="(280,220)"/>
+    <wire from="(500,220)" to="(560,220)"/>
+    <wire from="(500,240)" to="(550,240)"/>
+    <wire from="(550,240)" to="(550,280)"/>
+    <wire from="(550,280)" to="(600,280)"/>
+    <wire from="(560,160)" to="(560,220)"/>
+    <wire from="(560,160)" to="(600,160)"/>
+  </circuit>
+  <vhdl appearance="logisim_evolution" name="rs_latch">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+-- RS latch : two cross-coupled NOR gates&#13;
+entity rs_latch is&#13;
+    port(&#13;
+        s, r  : in  std_logic;&#13;
+        q, qn : out std_logic&#13;
+    );&#13;
+end entity rs_latch;&#13;
+&#13;
+architecture bhv of rs_latch is&#13;
+    signal q_i  : std_logic := '0';&#13;
+    signal qn_i : std_logic := '1';&#13;
+begin&#13;
+    q_i  &lt;= r nor qn_i;   -- upper NOR : Q  = (R + Q')'&#13;
+    qn_i &lt;= s nor q_i;    -- lower NOR : Q' = (S + Q)'&#13;
+&#13;
+    q  &lt;= q_i;&#13;
+    qn &lt;= qn_i;&#13;
+end architecture bhv;&#13;
+</vhdl>
+  <vhdl appearance="logisim_evolution" name="d_latch">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+-- D latch with enable (level triggered)&#13;
+entity d_latch is&#13;
+    port(&#13;
+        d, en : in  std_logic;&#13;
+        q, qn : out std_logic&#13;
+    );&#13;
+end entity d_latch;&#13;
+&#13;
+architecture bhv of d_latch is&#13;
+    signal q_i : std_logic := '0';&#13;
+begin&#13;
+    process(d, en)&#13;
+    begin&#13;
+        if en = '1' then&#13;
+            q_i &lt;= d;        -- en=1 : transparent, Q follows D&#13;
+        end if;              -- en=0 : no assignment -&gt; keeps old value&#13;
+    end process;&#13;
+&#13;
+    q  &lt;= q_i;&#13;
+    qn &lt;= not q_i;&#13;
+end architecture bhv;&#13;
+</vhdl>
+  <vhdl appearance="logisim_evolution" name="d_ff">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+-- Positive-edge-triggered D flip-flop&#13;
+entity d_ff is&#13;
+    port(&#13;
+        d, clk : in  std_logic;&#13;
+        q, qn  : out std_logic&#13;
+    );&#13;
+end entity d_ff;&#13;
+&#13;
+architecture bhv of d_ff is&#13;
+    signal q_i : std_logic := '0';&#13;
+begin&#13;
+    process(clk)&#13;
+    begin&#13;
+        if rising_edge(clk) then   -- only at the 0 -&gt; 1 moment of clk&#13;
+            q_i &lt;= d;&#13;
+        end if;&#13;
+    end process;&#13;
+&#13;
+    q  &lt;= q_i;&#13;
+    qn &lt;= not q_i;&#13;
+end architecture bhv;&#13;
+</vhdl>
+  <vhdl appearance="logisim_evolution" name="jk_ff">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+-- Positive-edge-triggered JK flip-flop&#13;
+--   JK = 00 Hold, 01 Reset, 10 Set, 11 Toggle&#13;
+entity jk_ff is&#13;
+    port(&#13;
+        j, k, clk : in  std_logic;&#13;
+        q, qn     : out std_logic&#13;
+    );&#13;
+end entity jk_ff;&#13;
+&#13;
+architecture bhv of jk_ff is&#13;
+    signal q_i : std_logic := '0';&#13;
+    signal jk  : std_logic_vector(1 downto 0);&#13;
+begin&#13;
+    jk &lt;= j &amp; k;               -- combine J and K into 2 bits&#13;
+&#13;
+    process(clk)&#13;
+    begin&#13;
+        if rising_edge(clk) then&#13;
+            case jk is&#13;
+                when "00"   =&gt; q_i &lt;= q_i;       -- Hold&#13;
+                when "01"   =&gt; q_i &lt;= '0';       -- Reset&#13;
+                when "10"   =&gt; q_i &lt;= '1';       -- Set&#13;
+                when "11"   =&gt; q_i &lt;= not q_i;   -- Toggle&#13;
+                when others =&gt; q_i &lt;= q_i;&#13;
+            end case;&#13;
+        end if;&#13;
+    end process;&#13;
+&#13;
+    q  &lt;= q_i;&#13;
+    qn &lt;= not q_i;&#13;
+end architecture bhv;&#13;
+</vhdl>
+  <vhdl appearance="logisim_evolution" name="d_ff_sc">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+-- Positive-edge D flip-flop with asynchronous set / clear&#13;
+--   clr = '1'             : Q &lt;= '0' immediately (highest priority)&#13;
+--   set = '1' (clr = '0') : Q &lt;= '1' immediately&#13;
+--   otherwise             : normal D flip-flop&#13;
+entity d_ff_sc is&#13;
+    port(&#13;
+        d, clk   : in  std_logic;&#13;
+        set, clr : in  std_logic;&#13;
+        q, qn    : out std_logic&#13;
+    );&#13;
+end entity d_ff_sc;&#13;
+&#13;
+architecture bhv of d_ff_sc is&#13;
+    signal q_i : std_logic := '0';&#13;
+begin&#13;
+    process(clk, set, clr)&#13;
+    begin&#13;
+        if clr = '1' then              -- checked first -&gt; clear has priority&#13;
+            q_i &lt;= '0';&#13;
+        elsif set = '1' then&#13;
+            q_i &lt;= '1';&#13;
+        elsif rising_edge(clk) then&#13;
+            q_i &lt;= d;&#13;
+        end if;&#13;
+    end process;&#13;
+&#13;
+    q  &lt;= q_i;&#13;
+    qn &lt;= not q_i;&#13;
+end architecture bhv;&#13;
+</vhdl>
+</project>
