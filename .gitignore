@@ -1,7 +1,0 @@
-work/
-*.wlf
-transcript
-quartus/db/
-quartus/incremental_db/
-quartus/output_files/
-*.autosave
